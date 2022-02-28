@@ -34,7 +34,7 @@ export const state = () => ({
 
         try {
             let allPosts = await fetch(
-                'http://kakohara.work/wp-json/wp/v2/posts'
+                'https://kakohara.work/wp-json/wp/v2/posts'
             ).then(res => res.json())
 
             allPosts = allPosts

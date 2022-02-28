@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const dynamicRoutes = () => {
   const routes = axios
-  .get('http://kakohara.work/wp-json/wp/v2/posts')
+  .get('https://kakohara.work/wp-json/wp/v2/posts')
   .then(res => {
     return res.data.map(post => `/blog/${post.slug}`)
   })
@@ -33,7 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/posts.server'
+    '~/plugins/posts.server'
   ],
 
   generate: {
