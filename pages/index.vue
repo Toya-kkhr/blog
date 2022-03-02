@@ -4,7 +4,7 @@
 
       <v-card
       v-for="post in sortedPosts"
-      :key="post.id"
+      :key="post.slug"
       class="ma-10 post"
       >
         <v-card-title>
@@ -36,7 +36,7 @@ export default {
 
   computed: {
     allPosts() {
-      return this.$store.getters.allPosts
+      return this.$store.state.allPosts
     },
     sortedPosts() {
       if (!this.selectedTag) return this.allPosts;

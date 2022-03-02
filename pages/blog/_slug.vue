@@ -3,18 +3,18 @@
              <v-card-title>
              <h1>
                  <!-- {{ post.title.rendered }} -->
-                 {{ post.title }}
+                 {{ post.title.rendered }}
              </h1>
              </v-card-title>
 
-             <!-- <small>
+             <small>
                  {{ post.date }}
              </small>
              
              <v-card-text
              v-html="post.content"
              >
-             </v-card-text> -->
+             </v-card-text>
          </v-card>
  </template>
 
@@ -27,7 +27,7 @@
          },
          computed: {
             posts() {
-                return this.$store.getters.allPosts
+                return this.$store.state.allPosts
             },
             post() {
                 return this.posts.find(el => el.slug === this.slug)
