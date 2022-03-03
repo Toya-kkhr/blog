@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6" class="mt-7">
+    <v-col cols="12" sm="8" md="6" class="mt-7 px-5">
 
     <div 
     v-for="post in sortedPosts"
