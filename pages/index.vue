@@ -2,24 +2,54 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
 
-      <v-card
+      <!-- <div
       v-for="post in sortedPosts"
       :key="post.slug"
-      class="ma-10 post"
+      class="ma-10 post card neumorphism"
+      color="#ebf5fc"
       >
-        <v-card-title>
-          <h3>
-            {{ post.title.rendered }}
-          </h3>
-          </v-card-title>
-          <small>{{ post.date }}</small>
-          <v-card-text
-          v-html="post.excerpt.rendered"
-          class="readmore"
-          >
-          </v-card-text>
-        <a :href="`blog/${post.slug}`" class="readmore slide">Read more ⟶</a>
-      </v-card>
+      <div
+      class="card__icon"
+      >
+        <div
+        class="card__text"
+        >
+          <v-card-title>
+            <h3>
+              {{ post.title.rendered }}
+            </h3>
+            </v-card-title>
+            <small>{{ post.date }}</small>
+        </div>
+        </div>
+      </div> -->
+
+    <div 
+    v-for="post in sortedPosts"
+    :key="post.slug"
+    class="card-w"
+    >
+    <div class="card neumorphism">
+    <div>
+      <h2>
+        {{ post.title.rendered }}
+      </h2>
+      <small>{{ post.date }}</small>
+      <div
+      class="pt-6 text-center"
+      >
+      <v-btn
+      width="70%"
+      color="primary"
+      :to="`blog/${post.slug}`"
+      >
+        READ MORE
+      </v-btn>
+      </div>
+    </div>
+  </div>
+  </div>
+  
 
     </v-col>
   </v-row>
@@ -52,63 +82,56 @@ export default {
 
 <style lang="scss" >
 
-  a.readmore {
-  display: inline-block;
-  font-size: 11px;
-  text-transform: uppercase;
-  padding: 5px 15px;
-  letter-spacing: 2px;
-  position: relative;
-  color: #000;
-  font-weight: 700;
-  font-family: "Open Sans", serif;
-  border: 1px solid #ccc;
-  background: #fff;
+/* variables */
+$bkg: #f7f8fc;
+$l-grad-hex-100: #efeff6;
+$l-grad-rgba-100: rgba(179, 202, 226, 0.28);
+
+.neumorphism {
+  background-color: #e0e5ec;
+  //dark
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  //light
+  //box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #FFFFFF;
 }
 
-.post {
-  border-bottom: 1px solid rgb(223, 222, 222);
-  margin-bottom: 2em;
-  padding-bottom: 2em;
-  color: #444;
+.card-w{
+    margin-bottom: 20px;
 
-  h3 {
-    margin-bottom: 0.5em;
-    font-size: 26px;
-  }
-}
-
-.slide {
-  position: relative;
+  .card{
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px 30px;
+    border-radius: 30px;
+    position: relative;
   background: transparent;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  z-index: 1;
-  backface-visibility: hidden;
-  perspective: 1000px;
-  transform: translateZ(0);
-  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
 
-  &:hover {
-    color: #fff;
-  }
-
-  &:hover:before {
-    right: -1px;
+    .card__icon{
+      
+    }
+    .card__text{
+      text-align: center;
+    }
   }
 }
 
-.slide::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: #000;
-  transition: right 0.3s ease;
-  z-index: -1;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: 108%;
-  backface-visibility: hidden;
+
+
+/* inset */
+.card.inset {
+    box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
+    i {
+        text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
+    }
+}
+
+.card.active {
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+      -9px -9px 16px rgba(255, 255, 255, 0.5),
+       inset 3px 3px 7px rgba(136, 165, 191, 0.48), 
+      inset -3px -3px 7px #FFFFFF;
+    background: linear-gradient(318.32deg, rgba(163, 177, 198, 0.1) 0%, rgba(163, 177, 198, 0.1) 55%, rgba(163, 177, 198, 0.25) 100%);
 }
 </style>

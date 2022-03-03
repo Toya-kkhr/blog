@@ -2,7 +2,6 @@
          <v-card>
              <v-card-title>
              <h1>
-                 <!-- {{ post.title.rendered }} -->
                  {{ post.title.rendered }}
              </h1>
              </v-card-title>
@@ -12,7 +11,7 @@
              </small>
              
              <v-card-text
-             v-html="post.content"
+             v-html="post.content.rendered"
              >
              </v-card-text>
          </v-card>

@@ -1,7 +1,13 @@
 <template>
-  <v-app dark>
+  <v-app 
+  dark
+  style="background:#ebf5fc;"
+  >
 
-    <v-app-bar app>
+    <v-app-bar 
+    app
+    style="background:#ebf5fc;"
+    >
       <v-spacer/>
       <v-app-bar-nav-icon
       @click.stop="drawer = !drawer"
@@ -13,7 +19,11 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
+    <v-footer 
+    fixed 
+    app
+    style="background:#ebf5fc;"
+    >
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>

@@ -1,6 +1,16 @@
 import colors from 'vuetify/es5/util/colors'
 import axios from 'axios'
 
+const dynamicRoutes = () => {
+  const routes = axios
+    .get(`${process.env.BASE_API_URL}/posts?page=1&per_page=20`)
+    .then(res => {
+      return res.data.map(post => `/blog/${post.slug}`)
+    })
+  console.log(routes)
+  return routes
+}
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -27,21 +37,7 @@ export default {
   ],
 
   generate: {
-    routes(){
-      return Promise.all([
-        axios.get('https://kakohara.work/wp-json/wp/v2/posts')
-      ])
-      .then((res) => {
-        const posts = res[0]
-
-        return posts.data.map((post) => {
-          return {
-            route: '/blog/'+ post.slug,
-            payload: post
-          }
-        })
-      })
-    }
+    routes: dynamicRoutes,
   },
 
   ssr: true,
