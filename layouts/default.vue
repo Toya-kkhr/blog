@@ -1,12 +1,12 @@
 <template>
   <v-app 
   dark
-  style="background:#ebf5fc;"
+  style="background:#e0e5ec;"
   >
 
     <v-app-bar 
     app
-    style="background:#ebf5fc;"
+    style="background:#e0e5ec;"
     >
       <v-spacer/>
       <v-app-bar-nav-icon
@@ -22,7 +22,7 @@
     <v-footer 
     fixed 
     app
-    style="background:#ebf5fc;"
+    style="background:#e0e5ec;"
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>

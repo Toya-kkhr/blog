@@ -1,28 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-
-      <!-- <div
-      v-for="post in sortedPosts"
-      :key="post.slug"
-      class="ma-10 post card neumorphism"
-      color="#ebf5fc"
-      >
-      <div
-      class="card__icon"
-      >
-        <div
-        class="card__text"
-        >
-          <v-card-title>
-            <h3>
-              {{ post.title.rendered }}
-            </h3>
-            </v-card-title>
-            <small>{{ post.date }}</small>
-        </div>
-        </div>
-      </div> -->
+    <v-col cols="12" sm="8" md="6" class="mt-7">
 
     <div 
     v-for="post in sortedPosts"
@@ -49,7 +27,6 @@
     </div>
   </div>
   </div>
-  
 
     </v-col>
   </v-row>
@@ -96,7 +73,7 @@ $l-grad-rgba-100: rgba(179, 202, 226, 0.28);
 }
 
 .card-w{
-    margin-bottom: 20px;
+    margin-bottom: 55px;
 
   .card{
     flex-direction: column;
@@ -108,12 +85,6 @@ $l-grad-rgba-100: rgba(179, 202, 226, 0.28);
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.2);
 
-    .card__icon{
-      
-    }
-    .card__text{
-      text-align: center;
-    }
   }
 }
 
