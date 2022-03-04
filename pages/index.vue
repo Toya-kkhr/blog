@@ -1,11 +1,15 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6" class="mt-7 px-5">
+    
 
     <div 
     v-for="post in sortedPosts"
     :key="post.slug"
     class="card-w"
+    nuxt
+    @click="$router.push(`blog/${post.slug}`)"
+    app
     >
     <div class="card neumorphism">
     <div>
@@ -17,12 +21,16 @@
       class="pt-6 text-center"
       >
       <v-btn
+      color="#e0e5ec"
       width="70%"
-      color="primary"
       :to="`blog/${post.slug}`"
+      nuxt
+      class="button"
       >
-        READ MORE
+      READ
       </v-btn>
+ 
+
       </div>
     </div>
   </div>
@@ -59,11 +67,6 @@ export default {
 
 <style lang="scss" >
 
-/* variables */
-$bkg: #f7f8fc;
-$l-grad-hex-100: #efeff6;
-$l-grad-rgba-100: rgba(179, 202, 226, 0.28);
-
 .neumorphism {
   background-color: #e0e5ec;
   //dark
@@ -88,21 +91,36 @@ $l-grad-rgba-100: rgba(179, 202, 226, 0.28);
   }
 }
 
-
-
-/* inset */
-.card.inset {
-    box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
-    i {
-        text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
-    }
+.card {
+  padding: 1.5em 5em;
+  background: #efefef;
+  border: none;
+  border-radius: .5rem;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
 }
 
-.card.active {
-    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-      -9px -9px 16px rgba(255, 255, 255, 0.5),
-       inset 3px 3px 7px rgba(136, 165, 191, 0.48), 
-      inset -3px -3px 7px #FFFFFF;
-    background: linear-gradient(318.32deg, rgba(163, 177, 198, 0.1) 0%, rgba(163, 177, 198, 0.1) 55%, rgba(163, 177, 198, 0.25) 100%);
+.card:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.card:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+              inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 </style>
