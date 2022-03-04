@@ -44,7 +44,7 @@
      }
  </script>
 
- <style lang="scss">
+ <style lang="scss" scoped>
      /* variables */
 $bkg: #f7f8fc;
 $l-grad-hex-100: #efeff6;
