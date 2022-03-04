@@ -20,17 +20,6 @@
       <div
       class="pt-6 text-center"
       >
-      <v-btn
-      color="#e0e5ec"
-      width="70%"
-      :to="`blog/${post.slug}`"
-      nuxt
-      class="button"
-      >
-      READ
-      </v-btn>
- 
-
       </div>
     </div>
   </div>
