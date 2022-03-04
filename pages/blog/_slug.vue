@@ -45,29 +45,6 @@
  </script>
 
  <style lang="scss" scoped>
-     /* variables */
-$bkg: #f7f8fc;
-$l-grad-hex-100: #efeff6;
-$l-grad-rgba-100: rgba(179, 202, 226, 0.28);
-
-$d-grad-100: dark;
-
-body{
-   //background: linear-gradient(318.32deg, #C3D1E4 0%, #DDE7F3 55%, #D4E0ED 100%);
-    background: #e0e5ec;
-    min-height: 100vh;
-}
-.wrapper{
-  margin: 60px auto;
-}
-
-.neumorphism {
-  background-color: #e0e5ec;
-  //dark
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-  //light
-  //box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #FFFFFF;
-}
 
 .card-w{
     margin-bottom: 20px;
@@ -84,8 +61,6 @@ body{
   }
 }
 
-
-
 /* inset */
 .card.inset {
     box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
@@ -94,11 +69,5 @@ body{
     }
 }
 
-.card.active {
-    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-      -9px -9px 16px rgba(255, 255, 255, 0.5),
-       inset 3px 3px 7px rgba(136, 165, 191, 0.48), 
-      inset -3px -3px 7px #FFFFFF;
-    background: linear-gradient(318.32deg, rgba(163, 177, 198, 0.1) 0%, rgba(163, 177, 198, 0.1) 55%, rgba(163, 177, 198, 0.25) 100%);
-}
+
  </style>

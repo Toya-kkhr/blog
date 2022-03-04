@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 
 .neumorphism {
   background-color: #e0e5ec;
