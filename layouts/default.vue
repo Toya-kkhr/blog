@@ -146,6 +146,7 @@ button {
               6px 6px 8px rgba(255, 255, 255, .075),
               6px 6px 10px rgba(0, 0, 0, .15);
 }
+@media screen and (min-width: 750px) {
 button:hover {
   box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
               -2px -2px 4px rgba(255, 255, 255, .4),
@@ -158,5 +159,6 @@ button:active {
               inset -2px -2px 4px rgba(255, 255, 255, .5),
               inset 2px 2px 2px rgba(255, 255, 255, .075),
               inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
 }
 </style>
