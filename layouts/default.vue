@@ -8,8 +8,7 @@
     app
     style="background:#e0e5ec;"
     >
-      <v-spacer/>
-      <div
+          <div
       class="app-bar-title"
       >
       <h1>
@@ -71,7 +70,7 @@ export default {
   h1{
     margin:0;
     font-family:'Oswald';
-    color: #f1f7ff;
+    color: #93989e;
     text-shadow:-5px -3px 8px var(--color-primary),
     6px 2px 12px var(--color-primary-darkest);
     outline:none;
