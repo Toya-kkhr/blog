@@ -71,7 +71,7 @@ export default {
   h1{
     margin:0;
     font-family:'Oswald';
-    color: #e0ebfa;
+    color: #f1f7ff;
     text-shadow:-5px -3px 8px var(--color-primary),
     6px 2px 12px var(--color-primary-darkest);
     outline:none;
