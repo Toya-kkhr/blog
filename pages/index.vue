@@ -81,6 +81,7 @@ export default {
 }
 
 .card {
+  cursor: pointer;
   padding: 1.5em 5em;
   background: #efefef;
   border: none;
