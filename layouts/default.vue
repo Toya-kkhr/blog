@@ -7,6 +7,7 @@
     <v-app-bar 
     app
     style="background:#e0e5ec;"
+    height="70px"
     >
           <div
       class="app-bar-title"
@@ -15,12 +16,13 @@
       <span
       class="text header"
       >
-        KAKOLOG
+        KAKOLOG.
       </span>
       </h1>
       </div>
       <v-spacer/>
       <v-app-bar-nav-icon
+      class="ma-1"
       @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
     </v-app-bar>
@@ -127,5 +129,33 @@ export default {
       }
     }
   }
+}
+
+button {
+  border: none;
+  border-radius: .5rem;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  text-align: center;
+  outline: none;
+  transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+}
+button:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+button:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+              inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 </style>
