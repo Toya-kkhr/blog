@@ -165,12 +165,12 @@ button:hover {
               2px 2px 2px rgba(255, 255, 255, .05),
               2px 2px 4px rgba(0, 0, 0, .1);
 }
+}
 
 button:active {
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
               inset -2px -2px 4px rgba(255, 255, 255, .5),
               inset 2px 2px 2px rgba(255, 255, 255, .075),
               inset 2px 2px 4px rgba(0, 0, 0, .15);
-}
 }
 </style>
