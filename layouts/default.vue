@@ -27,6 +27,18 @@
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list>
+        <v-list-item>
+          categories
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-main>
       <v-container>
         <Nuxt />

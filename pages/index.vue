@@ -99,6 +99,7 @@ export default {
               6px 6px 10px rgba(0, 0, 0, .15);
 }
 
+@media screen and (min-width: 750px) {
 .card:hover {
   box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
               -2px -2px 4px rgba(255, 255, 255, .4),
@@ -112,7 +113,6 @@ export default {
               inset 2px 2px 2px rgba(255, 255, 255, .075),
               inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
-
-
+}
 
 </style>
