@@ -9,7 +9,6 @@
     class="card-w"
     nuxt
     @click="$router.push(`blog/${post.slug}`)"
-    app
     >
     <div class="card neumorphism">
     <div>

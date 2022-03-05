@@ -11,6 +11,8 @@
     >
           <div
       class="app-bar-title"
+      style="cursor: pointer;"
+      @click="$router.push('/')"
       >
       <h1>
       <span
