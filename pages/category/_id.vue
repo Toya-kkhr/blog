@@ -8,7 +8,7 @@
     :key="post.slug"
     class="card-w"
     nuxt
-    @click="$router.push(`blog/${post.slug}`)"
+    @click="$router.push(`/blog/${post.slug}`)"
     >
     <div class="card neumorphism">
     <div>
