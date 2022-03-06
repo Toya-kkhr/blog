@@ -22,9 +22,6 @@
         v-html="post.content.rendered"
         >
         </div>
-    <div class="card__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, iusto et. Omnis quam enim vitae, esse dolores hic reiciendis nobis eligendi commodi eaque sed maxime non dolorum incidunt laudantium facilis!
-    </div>
   </div>
   </div>
     </v-col>
@@ -59,7 +56,7 @@
   .card{
     flex-direction: column;
     align-items: center;
-    padding: 60px 30px;
+    padding: 60px 30px 30px;
     border-radius: 30px;
     position: relative;
   background: transparent;
