@@ -23,6 +23,25 @@
   </div>
   </div>
 
+      <div 
+    v-if="noPosts()"
+    class="card-w"
+    nuxt
+    @click="$router.push('/')"
+    >
+    <div class="card neumorphism">
+    <div>
+      <h2>
+        記事が見つかりません。
+      </h2>
+        <div
+      class="pt-6 text-center"
+        >
+        </div>
+    </div>
+  </div>
+  </div>
+
     </v-col>
   </v-row>
 </template>
@@ -41,14 +60,25 @@ export default {
     },
     sortedPosts() {
         const pathNum = Number(this.$route.params.id)
-      return this.allPosts.filter(el => 
+        const a = this.allPosts.filter(el => 
       el.categories.includes(pathNum)
       )
+        return a
+
     },
 
   },
   created() {
     this.$store.dispatch("getAllPosts")
+  },
+  methods: {
+        noPosts(){
+            if (this.sortedPosts.length === 0){
+                return true
+            }else{
+                return false
+            }
+    }
   }
 }
 </script>
