@@ -34,7 +34,7 @@ export const state = () => ({
 
         try {
             let allPosts = await fetch(
-                'http://kakohara.work/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1'
+                'https://kakohara.work/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1'
             ).then(res => res.json())
 
             allPosts = allPosts
@@ -62,7 +62,7 @@ export const state = () => ({
 
         try {
             let allCategories = await fetch(
-                'http://kakohara.work/wp-json/wp/v2/categories'
+                'https://kakohara.work/wp-json/wp/v2/categories'
             ).then(res => res.json())
 
             allCategories = allCategories
