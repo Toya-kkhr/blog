@@ -45,10 +45,17 @@ export default {
       if (!this.selectedTag) return this.allPosts;
       return this.allPosts.filter(el => el.tags.includes(this.selectedTag))
     },
-
+    allCategories() {
+      return this.$store.state.allCategories
+    }
   },
   created() {
     this.$store.dispatch("getAllPosts")
+  },
+  methods: {
+    postCategory(){
+
+    }
   }
 }
 </script>
