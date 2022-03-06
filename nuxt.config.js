@@ -33,7 +33,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/posts.server',
-    '~/plugins/categories.server'
+    '~/plugins/categories.server',
+    '~/plugins/dateformat'
   ],
 
   generate: {

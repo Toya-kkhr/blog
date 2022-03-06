@@ -8,7 +8,7 @@
             {{ post.title.rendered }}
         </h1>
         <small>
-            {{ post.date }}
+            {{ post.date | dateformat }}
         </small>
         <div
         v-html="post.content.rendered"

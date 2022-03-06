@@ -15,7 +15,7 @@
       <h2>
         {{ post.title.rendered }}
       </h2>
-      <small>{{ post.date }}</small>
+      <small>{{ post.date | dateformat }}</small>
       <div
       class="pt-6 text-center"
       >
