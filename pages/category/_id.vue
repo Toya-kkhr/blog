@@ -31,9 +31,9 @@
     >
     <div class="card neumorphism">
     <div>
-      <h2>
+      <h3>
         記事が見つかりません。
-      </h2>
+      </h3>
         <div
       class="pt-6 text-center"
         >
