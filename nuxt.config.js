@@ -17,7 +17,7 @@ export default {
     titleTemplate: '%s',
     title: 'kakolog.',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -33,7 +33,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/posts.server'
+    '~/plugins/posts.server',
+    '~/plugins/categories.server'
   ],
 
   generate: {

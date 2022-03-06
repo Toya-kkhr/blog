@@ -33,10 +33,42 @@
       v-model="drawer"
       absolute
       temporary
+      style="background:#e0e5ec;"
     >
+      <div
+        class="app-bar-title text-center pa-2"
+        >
+      <h3>
+      <span
+      class="text header"
+      >
+        KAKOLOG.
+      </span>
+      </h3>
+      </div>
       <v-list>
-        <v-list-item>
-          categories
+        <div
+        class="app-bar-title pa-2"
+        >
+          <h4>
+            <span
+             class="text header"
+            >
+            カテゴリー
+            </span>
+          </h4>
+        </div>
+        <v-list-item
+        v-for="category in allCategories"
+        :key="category.id"
+        nuxt
+        link
+        >
+        <v-list-item-content>
+          <v-list-item-title>
+            {{ category.slug }}
+          </v-list-item-title>
+          </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -66,6 +98,16 @@ export default {
     }
   },
 
+  computed: {
+    allCategories() {
+      return this.$store.state.allCategories
+    }
+  },
+
+  created() {
+     this.$store.dispatch("getAllCategories")
+  }
+
 }
 </script>
 
@@ -83,7 +125,7 @@ export default {
   --color-primary-darkest: hsl(var(--color),calc(var(--l) - 25%)); 
     background-color: #e0e5ec;
 
-  h1{
+  h1, h2, h3, h4{
     margin:0;
     font-family:'Oswald';
     color: #93989e;

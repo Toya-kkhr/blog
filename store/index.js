@@ -56,12 +56,27 @@ export const state = () => ({
         }
     
     },
-    async getAllCategories({ commit, state }){
-        const res = await this.$axios.$get('/categories')
-        
-         commit('saveAllPosts', res);
-      
-      },
 
+    async getAllCategories({ commit, state, dispatch }){
+        if(state.allCategories.length) return
+
+        try {
+            let allCategories = await fetch(
+                'http://kakohara.work/wp-json/wp/v2/categories'
+            ).then(res => res.json())
+
+            allCategories = allCategories
+            .map(({id, slug, name, taxonomy}) => ({
+                id,
+                slug,
+                name,
+                taxonomy 
+            }))
+            commit("saveAllCategories", allCategories)
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
   }
   
