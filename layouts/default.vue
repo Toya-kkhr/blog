@@ -61,7 +61,7 @@
         <v-list-item
         v-for="category in allCategories"
         :key="category.id"
-        @click="$router.push(`category/${category.id}`)"
+        @click="$router.push(`/category/${category.id}`)"
         nuxt
         link
         >

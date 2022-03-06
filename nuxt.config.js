@@ -7,7 +7,6 @@ const dynamicRoutes = () => {
     .then(res => {
       return res.data.map(post => `/blog/${post.slug}`)
     })
-  console.log(routes)
   return routes
 }
 
@@ -42,7 +41,7 @@ export default {
   },
 
   ssr: true,
-  // target: 'static',
+  target: 'static',
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
