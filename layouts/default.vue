@@ -37,12 +37,14 @@
     >
       <div
         class="app-bar-title text-center pa-2"
+        style="cursor: pointer;"
+        @click="$router.push('/')"
         >
       <h3>
       <span
       class="text header"
       >
-        KAKOLOG.
+        KAKOLOG.<br>
       </span>
       </h3>
       </div>
