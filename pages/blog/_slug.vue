@@ -4,12 +4,20 @@
 
     <div class="card-w">
     <div class="card inset">
+        <div>
         <h1>
             {{ post.title.rendered }}
         </h1>
+        <div
+        class="text-right"
+        >
         <small>
             {{ post.date | dateformat }}
         </small>
+        </div>
+        </div>
+        <v-divider class="my-4"></v-divider>
+
         <div
         v-html="post.content.rendered"
         >

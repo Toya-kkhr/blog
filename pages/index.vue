@@ -5,7 +5,7 @@
 
     <div 
     v-for="post in sortedPosts"
-    :key="post.slug"
+    :key="post.id"
     class="card-w"
     nuxt
     @click="$router.push(`blog/${post.slug}`)"
