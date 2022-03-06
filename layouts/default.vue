@@ -81,12 +81,37 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer 
-    app
-    style="background:#e0e5ec;"
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+<v-footer
+padless
+>
+ <v-card
+ width="100%"
+ class="text-center"
+ style="background: #e0e5ec;"
+ flat
+ tile
+ >
+
+ <v-divider></v-divider>
+
+  <v-btn
+ v-for="icon in icons"
+ :key="icon.icon"
+ icon
+ :href="icon.url"
+ target="_blank"
+ class="mt-3"
+ >
+   <v-icon>
+     {{ icon.icon }}
+   </v-icon>
+ </v-btn>
+
+           <v-card-text>
+          {{ new Date().getFullYear() }} — <strong>Toya Kakohara</strong>
+        </v-card-text>
+ </v-card>
+</v-footer>
   </v-app>
 </template>
 
@@ -97,7 +122,21 @@ export default {
   data() {
     return {
       drawer: null,
+      icons: [
+        {
+          icon: "mdi-facebook",
+          url: "https://www.facebook.com/touya.kakohara/"
+        },
+        { 
+          icon: "mdi-instagram",
+          url: "https://www.instagram.com/__toya1128/"
+        },
+        {
+         icon: "mdi-github",
+         url: "https://github.com/Toya-kkhr/"
+        }
 
+      ]
     }
   },
 

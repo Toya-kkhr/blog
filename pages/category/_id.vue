@@ -2,14 +2,6 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6" class="mt-7 px-5">
 
-    <div>
-        <h3>
-            <span>
-                {{  }}
-            </span>
-        </h3>
-    </div>
-
     <div 
     v-for="post in sortedPosts"
     :key="post.slug"
