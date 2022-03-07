@@ -60,16 +60,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/google-gtag',
   ],
 
-  googleAnalytics: {
+  'google-gtag': {
     id: "G-K175PX5YHR",
     debug: false
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: "G-K175PX5YHR"
-    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
