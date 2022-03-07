@@ -74,5 +74,8 @@
     }
 }
 
+p, ul {
+    line-height: 35px;
+}
 
  </style>
