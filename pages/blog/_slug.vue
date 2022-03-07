@@ -1,6 +1,6 @@
  <template>
    <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="9" class="mt-7 px-5">
+    <v-col cols="12" sm="8" md="8" class="mt-7 px-5">
 
     <div class="card-w">
     <div class="card inset">
