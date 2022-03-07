@@ -63,12 +63,12 @@ export default {
   ],
 
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS,
+    id: "G-K175PX5YHR",
     debug: false
   },
   publicRuntimeConfig: {
     googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS
+      id: "G-K175PX5YHR"
     }
   },
 
