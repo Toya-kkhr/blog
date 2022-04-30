@@ -33,7 +33,8 @@
       v-model="drawer"
       absolute
       temporary
-      style="background:#e0e5ec;"
+      fixed
+      style="background:#e0e5ec;position:fixed;"
     >
       <div
         class="app-bar-title text-center pa-2"
